@@ -133,59 +133,77 @@
 //         return ((a + b + c) / 3);
 //     }
 // }
+// //№1
+// class Program
+// {
+//     static void Main()
+//     {
+//         Console.WriteLine(MetersToFeet(15));
+//         Console.WriteLine(CelsiusToFahrenheit(25));
+//     }
+//     static double MetersToFeet(double meters)
+//     {
+//         double feet = meters * 2.28084;
+//         return feet;
+//     }
+//     static double CelsiusToFahrenheit(double celsius)
+//     {
+//         double Far = (celsius * 1.8) + 32;
+//         return Far;
+//     }
+// }
+// //№2
 
-//№2
+// class Program
+// {
+//     public static int minLength = 8;
+//     static void Main()
+//     {
+//         string password = Console.ReadLine();
+//         Console.WriteLine("Возможные ошибки набора пароля! (False, если есть ошибка)");
+//         Console.WriteLine(HasMinLength(password, minLength));
+//         Console.WriteLine(HasDigit(password));
+//         Console.WriteLine(HasUpperCase(password));
+//         Console.WriteLine(IsPasswordValid(password) ? "Пароль принят" : "Пароль недостаточно надежен");
+//     }
 
-class Program
-{
-    public static int minLength = 8;
-    static void Main()
-    {
-        string password = Console.ReadLine();
-        Console.WriteLine("Возможные ошибки набора пароля!");
-        Console.WriteLine(HasMinLength(password, minLength));
-        Console.WriteLine(HasDigit(password));
-        Console.WriteLine(HasUpperCase(password));
-        Console.WriteLine(IsPasswordValid(password) ? "Пароль принят" : "Пароль недостаточно надежен");
-    }
+//     static bool HasMinLength(string password, int minLength)
+//     {
+//         return password.Length >= minLength ? true : false;
+//     }
+//     static bool HasDigit(string password)
+//     {
+//         bool HasPassword =false;
+//         foreach (char letter in password)
+//         {
+//             if (char.IsDigit(letter))
+//             {
+//                 HasPassword = true;
+//                 break;
+//             }
 
-    static bool HasMinLength(string password, int minLength)
-    {
-        return password.Length >= minLength ? true : false;
-    }
-    static bool HasDigit(string password)
-    {
-        bool HasPassword =false;
-        foreach (char letter in password)
-        {
-            if (char.IsDigit(letter))
-            {
-                HasPassword = true;
-                break;
-            }
+//         }
+//         return HasPassword;
+//     }
+//     static bool HasUpperCase(string password)
+//     {
+//         bool HasPassword =false;
+//         foreach (char letter in password)
+//         {
+//             if (char.IsUpper(letter))
+//             {
+//                 HasPassword = true;
+//                 break;
+//             }
 
-        }
-        return HasPassword;
-    }
-    static bool HasUpperCase(string password)
-    {
-        bool HasPassword =false;
-        foreach (char letter in password)
-        {
-            if (char.IsUpper(letter))
-            {
-                HasPassword = true;
-                break;
-            }
+//         }
+//         return HasPassword;
+//     }
 
-        }
-        return HasPassword;
-    }
-
-    static bool IsPasswordValid(string password)
-    {
-        bool HasValid = false;
-        if (HasMinLength(password, minLength) && HasDigit(password) && HasUpperCase(password)) HasValid = true;
-        return HasValid;
-    }
-}
+//     static bool IsPasswordValid(string password)
+//     {
+//         bool HasValid = false;
+//         if (HasMinLength(password, minLength) && HasDigit(password) && HasUpperCase(password)) HasValid = true;
+//         return HasValid;
+//     }
+// }
